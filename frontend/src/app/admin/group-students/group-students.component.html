@@ -1,0 +1,26 @@
+<!-- groupstudents.component.html -->
+<div class="container mt-5">
+    <h2>Group Students</h2>
+    <input type="text" class="form-control" placeholder="Search students..." [(ngModel)]="searchText" (input)="onSearch()">
+    <table class="table table-striped mt-3">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of filteredStudents; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ student.name }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.role }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ngb-pagination [collectionSize]="totalRecords" [(page)]="currentPage" [pageSize]="pageSize"
+                    (pageChange)="onPageChange($event)">
+    </ngb-pagination>
+</div>

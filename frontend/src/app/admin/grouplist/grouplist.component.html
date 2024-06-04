@@ -1,0 +1,47 @@
+
+
+<section class="glist">
+
+  <div class="container mt-3  text-white">
+    <h2>Groupes List</h2>
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="Search Groupes..." [(ngModel)]="searchText" (input)="onSearch()">
+    </div>
+  
+    <!-- Cards for displaying groupes -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let groupe of filteredGroupes">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ groupe.name }}</h5>
+            <p class="card-text">{{ groupe.type }}</p>
+            <p class="card-text">Coach ID: {{ groupe.coachid }}</p>
+            <p class="card-text">Price: {{ groupe.price }}</p>
+            <p class="card-text">Horaire Début: {{ groupe.horaire_debut }}</p>
+            <p class="card-text">Horaire Fin: {{ groupe.horaire_fin }}</p>
+            <p class="card-text">Limit: {{ groupe.nbr_limit }}</p>
+          </div>
+          <div class="card-footer bg-white">
+            <div class="days-indicator">
+              <span *ngFor="let day of ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']"
+                    [ngStyle]="{'color': groupe.days[day] ? 'green' : 'red'}">
+                {{ day | slice:0:1 | uppercase }}
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-edit" (click)="editGroupe(groupe.id)">Edit</button>
+            <button class="btn btn-delete" (click)="deleteGroupe(groupe.id)">Delete</button>
+            <button class="btn btn-delete" (click)="listStudents(groupe.id)">Students</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Pagination -->
+    <ngb-pagination [collectionSize]="totalRecords" [(page)]="currentPage" [pageSize]="pageSize"
+                    (pageChange)="onPageChange($event)" aria-label="Default pagination">
+    </ngb-pagination>
+  </div>
+  
+</section>

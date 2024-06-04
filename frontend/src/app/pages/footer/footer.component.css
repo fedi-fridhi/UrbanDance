@@ -1,0 +1,57 @@
+.footer {
+    background: #343232;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.box {
+  
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.box h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.box a {
+    display: block;
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.box a:hover {
+    color: #ee42b5;
+}
+
+.box a i {
+    margin-right: 8px;
+    color: #ee42b5;
+}
+
+.credit {
+    text-align: center;
+    border-top: 1px solid #222;
+    color: #ccc;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.credit span {
+    color: #ee42b5;
+}

@@ -1,0 +1,11 @@
+<section class="Verify">
+<div class="verify-code container bg-light p-4 rounded">
+  <h2 class="text-center">Verify Reset Code</h2>
+  <form (ngSubmit)="verifyCode()" class="form-group">
+    <input type="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required class="form-control my-3">
+    <input type="text" [(ngModel)]="code" name="code" placeholder="Enter reset code" required class="form-control my-3">
+    <button type="submit" class="btn btn-primary btn-block">Verify Code</button>
+  </form>
+  <p>{{ message }}</p>
+</div>
+</section>

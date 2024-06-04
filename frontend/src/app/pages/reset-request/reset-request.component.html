@@ -1,0 +1,10 @@
+<section class="req">
+<div class="reset-request">
+    <h2>Request Password Reset</h2>
+    <form (ngSubmit)="sendResetCode()">
+      <input  class="form-control my-3" type="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Send Reset Code</button>
+    </form>
+    <p>{{ message }}</p>
+  </div>
+  </section>

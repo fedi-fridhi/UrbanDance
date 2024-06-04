@@ -1,0 +1,123 @@
+
+<a href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></a>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<section class="page" id="page">
+    <div class="hero-section">
+        <div class="hero-content">
+            <span class="h6 d-inline-block mb-4 subhead text-uppercase framed-text">Urban Dance Academy</span>
+
+            <h1>Join us <br>and master <br> the art of dance.</h1>
+            <a href="#Classes" class="btn">Get Started</a>
+        </div>
+    </div>
+
+   
+    <section class="Classes" id="Classes">
+        <h3 class="heading"> Our <span>Classes</span> </h3>
+        <p class="creation"> Elevate Your Movement Journey </p>
+        <div class="contentevent">
+       <div class="wrapper">
+         <div class="Card" (click)="urbandance();">
+            <img src=assets\6682.jpg alt="">
+            <div class="info">
+                <h1> Urban Dance </h1>
+            </div>
+         </div>
+         <div class="Card" (click)="flex();">
+            <img src="https://images.squarespace-cdn.com/content/v1/5ff81894a6a63d22c04c39f7/1612508229184-YEVRAXMFIU6P6L8R72GP/tumblr_lqbaakcDlT1qfz5m1o1_500.jpg" alt="">
+            <div class="info">
+                <h1> Flex </h1>
+            </div>
+         </div>
+         <div class="Card" (click)="parkour();">
+            <img src="https://img.freepik.com/photos-gratuite/homme-pleine-forme-faisant-du-parkour_23-2150490225.jpg?size=626&ext=jpg&ga=GA1.1.34264412.1711411200&semt=ais" alt="">
+            <div class="info">
+                <h1> Parkour</h1>
+            </div>
+         </div>
+       </div>
+        </div>
+    </section>
+
+    <section class="create" id="create">  
+         <h3 class="heading"><span> For who?</span></h3>
+        <p class="creation">Age is just a number </p>
+    <div class="contentevent1">
+      
+        
+        <div class="contentevent1">
+            <!--carte (1)-->
+            <div class="event_carte">
+                <div class="event-img">
+                    <img src="https://static.wixstatic.com/media/1c842c_4317e2627b414b8297fdc6b7a5d904ed~mv2.png/v1/fill/w_364,h_355,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9.png" alt="">
+                </div>
+                <div class="event-info">
+                   
+                    <strong class="event-title">
+                        <span >Kids</span>
+                    </strong>
+                    <p class="creation1">3-5 Years</p>
+                    <p  class="creation1" style="margin-top: 0;">6-8 Years</p>
+                </div>
+            </div>
+
+
+             <!--carte (2)-->
+            <div class="event_carte">
+                <div class="event-img">
+                    <img src="https://static.wixstatic.com/media/1c842c_31132a728b86442e8bfc97238f50fd17~mv2.png/v1/fill/w_493,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2.png" alt="">
+                </div>
+                <div class="event-info">
+                    <strong class="event-title">
+                        <span> Teenagers </span>
+                    </strong>
+                    <p class="creation1">9-13 Years</p>
+                    <p  class="creation1" style="margin-top: 0;">14-19 Years</p>
+                </div>
+            </div>
+             <!--carte (3)-->
+            <div class="event_carte">
+                <div class="event-img">
+                    <img src="https://static.wixstatic.com/media/1c842c_099bd17216f64fdcb17426bca9977efb~mv2.png/v1/fill/w_470,h_470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6.png" alt="">
+                </div>
+                <div class="event-info">
+                    <strong class="event-title">
+                        <span> Adultes </span>
+                    </strong>
+                    <p class="creation1"> +20 Years</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+        <div class="header1">
+            <h3 class="heading"><span>Our Events</span></h3>
+            <p class="creation"> Where Rhythm Meets Creativity </p>
+        </div>
+   <div class="wrapper1">      
+          
+            <app-list-events></app-list-events>
+            
+                    
+        
+   </div> 
+   
+    
+   <section class="locations" id="locations">
+    <div class="location-header">
+        <h3 class="heading"> Our <span>locations</span> </h3>
+        <p class="creation"> Discover Our Dance Spaces </p>
+    </div>
+    <div class="location-map">
+        <iframe src="https://www.google.com/maps/d/u/4/embed?mid=1IoSSVJER1QOVQOkfkKZKALFZ7653xzA&ehbc=2E312F&noprof=1" width="100%" height="480"></iframe>        
+    </div>
+</section>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
+ 
+</section>
+<app-footer></app-footer>

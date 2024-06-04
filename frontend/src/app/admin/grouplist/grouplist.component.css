@@ -1,0 +1,50 @@
+.glist{
+  background-image: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+  padding: 40px; /* Ajout de marge pour créer de l'espace */
+  width: 100%; /* Tableau 100% de la largeur */
+  box-sizing: border-box; /* Inclure le padding dans la largeur */
+  overflow-x: auto; /* Permettre le défilement horizontal si nécessaire */
+}
+.container{
+  
+  background-color: #333; /* Dark background color for form inputs */
+  color: #fff; /* White text color for form inputs */
+  border-color: #555; /* Darker border color for form inputs */
+  border-radius: 8px; /* Border-radius for rounded corners */
+  padding: 10px 15px; /* Increase padding for more length */
+  width: 100%; /* Full width for the form inputs */
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 40px; /* Adjusted margin-top */
+}
+.days-indicator span {
+    margin-right: 5px;
+    font-weight: bold;
+  }
+  
+  /* You can add additional styles for the cards and other elements here */
+  .card-footer.days-indicator {
+    font-size: 1.2rem;
+  }
+  
+  /* Ensure the buttons fit nicely in the card */
+  .card-footer button {
+    margin-right: 10px;
+  }
+  .btn-edit {
+    background-color: rgb(148, 0, 211); /* Change to the desired background color */
+    color: white; /* Change to the desired text color */
+}
+
+.btn-delete {
+    background-color: rgb(255, 105, 180); /* Change to the desired background color */
+    color: white; /* Change to the desired text color */
+}

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&display=swap');
+
+:root{
+   
+        --main-color: #9B719F;
+        --background: linear-gradient(95deg,#221725 15%,#873f8e 45%,#8f50c6 75%,#dc79c6 100%) 95%/200% 100%;
+        --color: #7500a7;
+    }
+    
+
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+   
+}
+
+.contact{
+    background-image: linear-gradient(to right, #000000, rgb(23, 23, 23),#222, #2d2c2c);}
+
+
+section{
+    padding:30px 9%;
+}
+
+.heading {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 48px; /* Adjust this size as needed for your design */
+    color: #fff; /* This makes the text white */
+    margin-bottom: 0.5em; /* Adds a little space below the heading */
+}
+
+.heading + p {
+    text-align: center;
+    padding-bottom: 2em;
+    color: #fff; /* Keeps this text white as well */
+    text-transform: uppercase; /* Makes all letters uppercase */
+    font-size: 20px; /* Adjust for desired emphasis */
+    margin-top: 0.5; /* Removes default top margin from <p> for tighter spacing with the heading */
+}
+h1{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0.5;
+    padding: 0;
+    font-size: 30px;
+}
+
+.btn{
+    margin-top: 10px;
+    display: inline-block;
+    padding:8px 30px;
+    font-size: 18px;
+    border-radius: 6px;
+    background: linear-gradient(to left,  #FDA7DF ,#702483 ,#9e71c0 ) 95%/200% 100%;
+    color:#fff;
+    background-size: 200%;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.btn:hover{
+    background-position: right;
+}
+
+
+@keyframes animate{
+    0%
+    {transform: rotate(0deg);}
+    100%
+    {transform: rotate(360deg);}
+}
+
+.contact form{
+    max-width: 700px;
+    margin:10px auto;
+    text-align: center;
+}
+
+.contact form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .inputBox input,
+.contact form textarea{
+    width: 100%;
+    background:#333;
+    border-radius: 5px;
+    padding:10px;
+    margin:7px 0;
+    font-size: 15px;
+    color:#fff;
+    text-transform: none;
+}
+
+.contact form .inputBox input::placeholder,
+.contact form textarea::placeholder{
+    color:#eee;
+    text-transform: capitalize;
+}
+
+.contact form .inputBox input:focus,
+.contact form textarea:focus{
+    background:#444;
+}
+
+.contact form .inputBox input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+
+#overlay{
+   display:none;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 1;
+   background-color:rgba(0, 0, 0, 0.5);
+   
+   border-radius: 6px;
+}
+#modal{
+    max-width: 700px;
+    height:420px;
+  
+    margin: auto;
+    background-color: white;
+    position: absolute;
+    top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   
+}
+.website-content{
+    height: 1000vh;
+}
+#overlay .container .form{
+    border-radius: 6px;
+    padding: 30px;
+    background-color: hsl(0, 33%, 2%);
+}
+
+
+
+#modal button{
+  margin-top: 5px;
+    background-color:rgb(251, 251, 251) ;
+}
+
+#close-modal-btn{
+    font-size: 30px;
+    font-weight: 900;
+    position: absolute;
+    top: 10;
+    right: 15px;
+    color: var(--color);
+}
+
+
+  .container form{
+    padding:20px;
+    width:700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    border-radius: 6px;
+  }
+  
+  .container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+  }
+  
+  .container form .row .col{
+    flex:1 1 250px;
+  }
+  
+  .container form .row .col .title{
+    font-size: 20px;
+    color:hsl(0, 0%, 87%);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .container form .row .col .inputBox{
+    margin:15px 0;
+  }
+  
+  .container form .row .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .container form .row .col .inputBox input{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+  }
+  
+  .container form .row .col .inputBox input:focus{
+    border:1px solid #000;
+  }
+  
+  .container form .row .col .flex{
+    display: flex;
+    gap:15px;
+  }
+  
+  .container form .row .col .flex .inputBox{
+    margin-top: 5px;
+  }
+  
+  .container form .row .col .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+  }
+  
+  .container form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background: var(--background);
+    color:#fff;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .container form .submit-btn:hover{
+    background: linear-gradient(95deg, #24144C 15%, #6D459A 30%, #AA436F 60%, #C53998 85%, #7721D6 100%) 95%/200% 100%;
+}
+
+/*end payment css*/
+
+  
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:15px 20px;
+    }
+
+    section{
+        padding:20px;
+    }
+
+}

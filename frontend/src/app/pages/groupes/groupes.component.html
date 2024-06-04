@@ -1,0 +1,38 @@
+<!-- listgroupes.component.html -->
+<div class="container mt-5">
+    <h2 class="color-white">Groupes List</h2>
+    
+  
+    <!-- Cards for displaying groupes -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let groupe of filteredGroupes">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ groupe.name }}</h5>
+            <p class="card-text">{{ groupe.type }}</p>
+            <p class="card-text">Price: {{ groupe.price }}</p>
+            <p class="card-text">Horaire Début: {{ groupe.horaire_debut }}</p>
+            <p class="card-text">Horaire Fin: {{ groupe.horaire_fin }}</p>
+            <p class="card-text">Limit: {{ groupe.nbr_limit }}</p>
+          </div>
+          <div class="card-footer bg-white">
+            <div class="days-indicator">
+              <span *ngFor="let day of ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']"
+                    [ngStyle]="{'color': groupe.days[day] ? 'green' : 'red'}">
+                {{ day | slice:0:1 | uppercase }}
+              </span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" (click)="subscribeToGroup(groupe.id, userId)">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Pagination -->
+    <ngb-pagination [collectionSize]="totalRecords" [(page)]="currentPage" [pageSize]="pageSize"
+                    (pageChange)="onPageChange($event)" aria-label="Default pagination">
+    </ngb-pagination>
+  </div>
+  

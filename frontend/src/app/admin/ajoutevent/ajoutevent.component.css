@@ -1,0 +1,13 @@
+.ajout-event {
+    background-image: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+    padding: 50px; /* Ajout de marge pour créer de l'espace */
+    width: 100%; /* Tableau 100% de la largeur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+    overflow-x: auto; /* Permettre le défilement horizontal si nécessaire */
+}
+
+.container .form-control {
+    background-color: #333; /* Dark background color for form inputs */
+    color: #fff; /* White text color for form inputs */
+    border-color: #555; /* Darker border color for form inputs */
+}

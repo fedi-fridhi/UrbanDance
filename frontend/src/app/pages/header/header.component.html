@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
+	<div class="container-fluid">
+		<a class="navbar-brand" routerLink="/home">
+			<h2 class="text-color text-capitalize">URBAN DANCE</h2>
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
+			aria-controls="navbarsid" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="ti-view-list"></span>
+		</button>
+		<div class="collapse text-center navbar-collapse" id="navbarsid">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" routerLink="#" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">User</a>
+					<ul class="dropdown-menu">
+                        
+						<li><a *ngIf="!isLoggedIn" class="dropdown-item" routerLink="/auth">Se Connecter</a></li>
+                        
+						<li>
+							<a *ngIf="isLoggedIn"
+							   class="dropdown-item"
+							   (click)="onLogout()"
+							   style="font-weight: bold; color: #ffffff; cursor: pointer;">
+							  Déconnecter
+							</a>
+						  </li>
+						  
+						<li><a *ngIf="isLoggedIn" class="dropdown-item" [routerLink]="['/profile', userId]">Profile</a></li>
+                     
+					</ul>
+				</li>
+				<li class="nav-item dropdown" *ngIf="userRole=='Admin'">
+					<a class="nav-link dropdown-toggle" routerLink="#" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">Admin</a>
+					<ul class="dropdown-menu">
+                        
+						<li><a  class="dropdown-item" routerLink="/ajoutgroupe">Add Group</a></li>
+						<li><a class="dropdown-item" routerLink="/listgroups">List Groups</a></li>
+						<li><a  class="dropdown-item" routerLink="/ajoutevent">Add Event</a></li>
+						<li><a class="dropdown-item" routerLink="/listevents">List Events</a></li>
+						<li><a  class="dropdown-item" routerLink="/users">List Users</a></li>
+						
+                     
+					</ul>
+				</li>
+				<li class="nav-item dropdown" *ngIf="userRole=='Coach'">
+					<a class="nav-link dropdown-toggle" routerLink="#" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">Coach</a>
+					<ul class="dropdown-menu">
+                        
+						<li><a  class="dropdown-item" routerLink="/ajoutgroupe">Add Group</a></li>
+						<li><a class="dropdown-item" routerLink="/listgroups">List Groups</a></li>
+						
+                     
+					</ul>
+				</li>
+				<li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
+				<li class="nav-item"><a class="nav-link" routerLink="/contact">Contact </a></li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>

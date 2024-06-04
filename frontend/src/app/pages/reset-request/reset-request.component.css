@@ -1,0 +1,44 @@
+.req {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-image: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c); /* Dark gradient background */
+}
+
+.reset-request {
+    background-color: #fff; /* Set background color to white for visibility */
+    color: #333; /* Dark text for readability */
+    width: 500px; /* Width of the container */
+    height: 300px; /* Height of the container to make it square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow for depth */
+    padding: 20px; /* Inner padding */
+}
+
+.form-control {
+    width: 100%; /* Full width to fit container */
+    margin-bottom: 20px; /* Space between form fields */
+    background-color: #f8f9fa; /* Light grey background */
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075); /* Subtle shadow inside inputs */
+}
+
+button {
+    width: 100%; /* Make button full width */
+    background-color: #de16b6; /* Custom pink background color */
+    border: none;
+    color: #fff; /* White text on the button */
+    padding: 10px 0; /* Padding for the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #c112a0; /* Darker pink on hover */
+}

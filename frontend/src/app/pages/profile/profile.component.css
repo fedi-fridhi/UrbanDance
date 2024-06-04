@@ -1,0 +1,34 @@
+.profile {
+    background-image: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+    padding: 60px; /* Ajout de marge pour créer de l'espace */
+    width: 100%; /* Tableau 100% de la largeur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+    overflow-x: auto; /* Permettre le défilement horizontal si nécessaire */
+}
+
+.container
+{
+    background-image: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+    color: #fff; /* White text color for form inputs */
+    border-color: #555; /* Darker border color for form inputs */
+}
+
+.profile-button {
+    color: #fff; /* Text color */
+    background-color: #de16b6; /* Background color */
+    border-color: #de16b6; /* Border color */
+}
+
+.profile-button:hover {
+    background-color: #de16b6; /* Darker background color on hover */
+    border-color: #de16b6; /* Darker border color on hover */
+}
+.card {
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth transition for shadow and transform */
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a shadow to lift the card */
+    transform: scale(1.03); /* Slightly enlarging the card */
+}
+

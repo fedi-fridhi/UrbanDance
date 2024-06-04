@@ -1,0 +1,30 @@
+
+<section class="event-subscribers" id="event-subscribers">
+    <div class="subscriber-list-container">
+        <div class="search-container">
+            <input type="text" [(ngModel)]="searchText" (input)="onSearch()" placeholder="Search Subscribers...">
+        </div>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Subscriber ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sub of filteredSubscribers | slice:0:10">
+                    <td>{{ sub.id }}</td>
+                    <td>{{ sub.name }}</td>
+                    <td>{{ sub.email }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <ngb-pagination class="bg-dark"
+        [collectionSize]="totalRecords" 
+        [(page)]="currentPage" 
+        [pageSize]="pageSize" 
+        (pageChange)="onPageChange($event)">
+      </ngb-pagination>
+    </div>
+</section>

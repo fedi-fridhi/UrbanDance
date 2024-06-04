@@ -1,0 +1,57 @@
+
+    <section class="ajout-event" id="ajout-event">
+    <div class="container mt-3 bg-dark text-white">
+        <ngb-alert *ngIf="alertMessage" type="warning" (close)="alertMessage = null">
+            {{ alertMessage }}
+        </ngb-alert>
+        <h2>Add New Event</h2>
+        <form class="event-form" (ngSubmit)="addEvent()" #eventForm="ngForm">
+            <div class="mb-3">
+                <label for="eventName" class="form-label">Event Name</label>
+                <input type="text" class="form-control" id="eventName" [(ngModel)]="event.name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="eventDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="eventDescription" [(ngModel)]="event.description" name="description"
+                    required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="eventPrice" class="form-label">Price</label>
+                <input type="number" class="form-control" id="eventPrice" [(ngModel)]="event.price" name="price" required>
+            </div>
+            <div class="mb-3">
+                <label for="eventDate" class="form-label">Event Date</label>
+                <input type="datetime-local" class="form-control" id="eventDate" [(ngModel)]="event.e_date" name="e_date"
+                    required>
+            </div>
+            <div class="mb-3">
+                <label for="eventType" class="form-label">Event Type</label>
+                <input type="text" class="form-control" id="eventType" [(ngModel)]="event.e_type" name="e_type" required>
+            </div>
+            <div class="mb-3">
+                <label for="coachName" class="form-label">Coach Name</label>
+                <input type="text" class="form-control" id="coachName" [(ngModel)]="event.coachName" name="coachName"
+                    (input)="searchCoach()" required>
+            </div>
+             <!-- New Localisation Field -->
+             <div class="mb-3">
+                <label for="eventLocalisation" class="form-label">Localisation</label>
+                <input type="text" class="form-control" id="eventLocalisation" [(ngModel)]="event.localisation" name="localisation" required>
+            </div>
+
+            <!-- New Limit Subscriptions Field -->
+            <div class="mb-3">
+                <label for="eventLimitSubs" class="form-label">Limit Subscriptions</label>
+                <input type="number" class="form-control" id="eventLimitSubs" [(ngModel)]="event.limit_subs" name="limit_subs" min="0" required>
+            </div>
+            <div class="mb-3">
+                <label for="eventBanner" class="form-label">Banner Video</label>
+                <input type="file" class="form-control" id="eventBanner" (change)="onFileSelect($event)" name="bannersrc"
+                    required>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!eventForm.valid">Add Event</button>
+        </form>
+    </div>
+
+
+</section>   

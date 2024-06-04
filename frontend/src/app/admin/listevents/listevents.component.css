@@ -1,0 +1,124 @@
+
+
+.listevents {
+    background-image: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+    padding: 20px; /* Ajout de marge pour créer de l'espace */
+    width: 100%; /* Tableau 100% de la largeur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+    overflow-x: auto; /* Permettre le défilement horizontal si nécessaire */
+}
+
+.event-list-container {
+    margin: 20px auto; /* Centrer le conteneur du tableau horizontalement */
+    background-color: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+    border-radius: 20px; /* Ajouter un border-radius pour les coins arrondis */
+    overflow-x: auto; /* Permettre le défilement horizontal si nécessaire */
+}
+
+
+.header {
+    background-color: #333;
+    color: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 40px; /* Adjusted margin-top */
+}
+
+/* Custom CSS for button colors */
+.btn-edit {
+    background-color: rgb(148, 0, 211); /* Change to the desired background color */
+    color: white; /* Change to the desired text color */
+}
+
+.btn-delete {
+    background-color: rgb(255, 105, 180); /* Change to the desired background color */
+    color: white; /* Change to the desired text color */
+}
+.btn-sub {
+    background-color: rgb(67, 25, 102); /* Change to match the desired background color */
+    color: white; /* Change to the desired text color */
+}
+.btn-sub,
+.btn-edit,
+.btn-delete {
+    color: white; /* Change to the desired text color */
+    margin-right: 10px; /* Add margin between buttons */
+}
+
+.search-container input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px; /* Add border-radius to the table */
+    overflow: hidden; /* Ensure content inside table doesn't overflow */
+}
+
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #333;
+    color: #ffffff;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #000000;
+}
+
+.table tbody tr:hover {
+    background-color: #000000;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin-right: 5px;
+}
+
+.pagination li a {
+    display: block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.pagination li.active a {
+    background-color:  rgb(148, 0, 211);
+}
+
+.pagination li a:hover {
+    background-color: #666;
+}

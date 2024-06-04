@@ -1,0 +1,21 @@
+
+<section class="contact" id="contact">
+    <h1 class="heading"> <span></span>Contact Us</h1>
+    <p>We will get back to you ASAP</p>
+  
+    <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+      <div class="inputBox">
+        <input type="text" placeholder="Name" name="name" [(ngModel)]="formData.name" required>
+        <input type="email" placeholder="Email" name="email" [(ngModel)]="formData.email" required>
+      </div>
+      <div class="inputBox">
+        <input type="tel" placeholder="Phone Number" name="number" [(ngModel)]="formData.number" pattern="[0-9]{8}" minlength="8" maxlength="8" required>
+        <input type="text" placeholder="Subject" name="subject" [(ngModel)]="formData.subject" required>
+      </div>
+      <textarea placeholder="Your Message" name="message" [(ngModel)]="formData.message" required></textarea>
+      <input type="submit" value="Send Message" class="btn" [disabled]="!contactForm.valid">
+    </form>
+  
+  </section>
+  
+<app-footer></app-footer>

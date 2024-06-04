@@ -1,0 +1,48 @@
+.user {
+    background-image: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+    padding:30px; /* Ajout de marge pour créer de l'espace */
+    width: 100%; /* Tableau 100% de la largeur */
+    box-sizing: border-box; /* Inclure le padding dans la largeur */
+    overflow-x: auto; /* Permettre le défilement horizontal si nécessaire */
+}
+
+.container .form-control {
+    background-color: #333; /* Dark background color for form inputs */
+    color: #fff; /* White text color for form inputs */
+    border-color: #555; /* Darker border color for form inputs */
+}
+
+
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 20px; /* Adjusted margin-top */
+}
+
+/* Custom CSS for button colors */
+.btn-edit {
+    background-color: rgb(148, 0, 211); /* Change to the desired background color */
+    color: white; /* Change to the desired text color */
+}
+
+.btn-delete {
+    background-color: rgb(255, 105, 180); /* Change to the desired background color */
+    color: white; /* Change to the desired text color */
+}
+.btn-delete,
+.btn-edit{
+    color: white; /* Change to the desired text color */
+    margin-right: 10px; /* Add margin between buttons */
+}
+.search-container input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}

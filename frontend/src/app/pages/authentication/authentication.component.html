@@ -1,0 +1,75 @@
+
+<div class="Authentication">
+    <div class="container" id="container" [ngClass]="{'right-panel-active': rightPanelActive}">
+        <div class="form-container sign-up-container">
+            <form [formGroup]="registerform" (ngSubmit)="submitRegister()">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" formControlName="registerName" placeholder="Name" />
+                <div *ngIf="registerName?.invalid && registerName?.touched">
+                    <div *ngIf="registerName?.errors?.['required']"><span>Name is required</span></div>
+                    <div *ngIf="registerName?.errors?.['minlength']"><span>Name must be at least 3 characters</span></div>
+                    <div *ngIf="registerName?.errors?.['pattern']"><span>Name must contain only letters</span></div>
+                </div>
+                <input type="email" formControlName="registerEmail" placeholder="Email" />
+                <div *ngIf="registerEmail?.invalid && registerEmail?.touched">
+                    <div *ngIf="registerEmail?.errors?.['email']"><span>Email is invalid</span></div>
+                    <div *ngIf="registerEmail?.errors?.['required']"><span>Email is required</span></div>
+                    
+                </div>
+                <input type="password" formControlName="registerPassword" placeholder="Password" />
+                <div *ngIf="registerPassword?.invalid && registerPassword?.touched">
+                    <div *ngIf="registerPassword?.errors?.['minlength']"><span>Password must be at least 6 characters</span></div>
+                    <div *ngIf="registerPassword?.errors?.['required']"><span>Password is required</span></div>
+                </div>
+                <button type="submit"[disabled]="registerform.invalid">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form [formGroup]="loginform" (ngSubmit)="submitLogin()">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" formControlName="loginemail" placeholder="Email" />
+                <div *ngIf="loginemail?.invalid && loginemail?.touched">
+                    <div *ngIf="loginemail?.errors?.['email']"><span>Email is invalid</span></div>
+                    <div *ngIf="loginemail?.errors?.['required']"><span>Email is required</span></div>
+                    
+                </div>
+                <input type="password" formControlName="loginpassword" placeholder="Password" />
+                <div *ngIf="loginpassword?.invalid && loginpassword?.touched">
+                    <div *ngIf="loginpassword?.errors?.['minlength']"><span>Password must be at least 6 characters</span></div>
+                    <div *ngIf="loginpassword?.errors?.['required']"><span>Password is required</span></div>
+                    
+                </div>
+                <a routerLink="/resetpassword">Forgot your password?</a>
+                <button type="submit"[disabled]="loginform.invalid">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button [ngClass]="{'ghost': true}" (click)="toggleRightPanel()" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome to UrbanDance!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button [ngClass]="{'ghost': true}" (click)="toggleRightPanel()" id="signUp">Sign Up</button>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    

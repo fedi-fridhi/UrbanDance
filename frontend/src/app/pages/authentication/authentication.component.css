@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+}
+
+.Authentication {
+    background: #f6f5f7;
+    background-image: linear-gradient(to right, #000000, rgb(23, 23, 23), #222, #2d2c2c);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+
+    height: 100vh;
+    margin: -20px 0 50px;
+
+    min-height: 100vh; /* Change height to min-height */
+    margin: 0; /* Remove negative margin */
+    padding: 50px 0; /* Add padding to create space */
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Change width to 100% */
+    max-width: 768px; /* Set max-width */
+    min-height: 480px;
+}
+
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+	font-weight:400;
+	margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: calc(14px + 0.25vw); /* Slightly larger, with responsiveness */
+    font-weight: 100;
+    line-height: 22px; /* Increased line height */
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-size: calc(12px + 0.25vw); /* Slightly larger, with responsiveness */
+}
+
+a {
+    color: #333;
+    font-size: calc(14px + 0.25vw); /* Slightly larger, with responsiveness */
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+button {
+    border-radius: 25px; /* Increased border radius for a softer look */
+    border: 1px solid #de16b6;
+    background-color: #de16b6;
+    color: #FFFFFF;
+    font-size: calc(12px + 0.25vw); /* Slightly larger, with responsiveness */
+    font-weight: bold;
+    padding: 15px 50px; /* Increased padding for a bigger button */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 150ms ease-in-out; /* Smoother transition effect */
+}
+
+button:active {
+    transform: scale(0.98); /* Less pronounced active state */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 43, 206, 0.5); /* Adding focus outline */
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
+form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+input {
+    background-color: #eee;
+    border: none;
+    padding: 15px 20px; /* Increased padding for larger input fields */
+    margin: 10px 0; /* Slightly larger margin */
+    width: 100%;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+        0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    overflow: hidden;
+    width: 850px; /* Increased width */
+    max-width: 100%;
+    min-height: 550px; /* Increased height */
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: #ff41b0;
+    background: linear-gradient(135deg, hsl(330, 100%, 71%), rgb(148, 0, 211));
+    background: linear-gradient(135deg, rgb(255, 105, 180), rgb(148, 0, 211));
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.social-container {
+    margin: 20px 0;
+}
+
+.social-container a {
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 50px; /* Increased size for the icons */
+    width: 50px; /* Increased size for the icons */
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: calc(14px + 0.25vw); /* Slightly larger, with responsiveness */
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 15px 0; /* Increased margin for better spacing */
+}
+
+footer i {
+    color: rgb(255, 0, 221);
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+}

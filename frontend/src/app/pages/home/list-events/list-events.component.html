@@ -1,0 +1,43 @@
+
+
+
+<ngb-carousel *ngIf="eventGroups.length > 0" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+  <ng-template ngbSlide *ngFor="let group of eventGroups; let i = index">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let event of group">
+          <div class="item-container">
+            <div class="img-container">
+              <video class="event-video"  autoplay muted loop>
+                <source [src]="'http://localhost/api/' + event.bannersrc" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="body-container">
+              <div class="overlay"></div>
+              <div class="event-info1">
+                <p class="title">{{ event.name }}</p>
+                <p class="title">By: {{ event.coachName }}</p>
+                <p class="price">{{ event.price }}dt</p>
+                <div class="additional-info">
+                  <p class="info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    {{ event.localisation }}
+                  </p>
+                  <p class="info">
+                    <i class="far fa-calendar-alt"></i>
+                    {{ event.e_date | date:'EEE, MMM d, hh:mm a' }}
+                  </p>
+                  <p class="info description">
+                    {{ event.description }}
+                  </p>
+                  <button class="btn btn-edit" (click)="subscribeEvent(event.id,userId)">S'inscrire</button>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </ng-template>
+</ngb-carousel>
